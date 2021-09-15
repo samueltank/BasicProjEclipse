@@ -70,17 +70,26 @@ public class GameJokenpo {
 			while(!(totalVencedorJogador == totalNecessarioInt) && !(totalVencedorMaquina == totalNecessarioInt)) 
 			{  	
 				// Imprime o número da partida, escolha, e resultado;
-				System.out.println();
-				System.out.printf("\nPARTIDA: %d\n", contadorPartidas);
-				System.out.println("Escolha uma das 3 opções: ");
-				System.out.println();
-				System.out.println("[1] - Pedra;");
-				System.out.println("[2] - Papel;");
-				System.out.println("[3] - Tesoura;");
-				System.out.println();
-				
-				System.out.print("Escolha a opção: ");
-				jogador = leitor.nextInt();			
+				do {
+					
+					System.out.println();
+					System.out.printf("\nPARTIDA: %d\n", contadorPartidas);
+					System.out.println("Escolha uma das 3 opções: ");
+					System.out.println();
+					System.out.println("[1] - Pedra;");
+					System.out.println("[2] - Papel;");
+					System.out.println("[3] - Tesoura;");
+					System.out.println();
+					
+					System.out.print("Escolha a opção: ");
+					jogador = leitor.nextInt();
+					
+					if((jogador != 1) && (jogador != 2) && (jogador != 3)) {
+						System.out.println();
+						System.out.println("Valor Incorreto! escolha outro: ");
+					}
+			
+				} while((jogador != 1) && (jogador != 2) && (jogador != 3));		
 				
 				System.out.println();
 				System.out.println("----------------------------------");
