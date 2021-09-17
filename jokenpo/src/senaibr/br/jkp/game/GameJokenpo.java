@@ -104,7 +104,7 @@ public class GameJokenpo {
 					{
 						// Bloco para pontuação do jogador;
 						System.out.println();
-						System.out.println("Você GANHOU da máquina, meu amigo! <3");
+						System.out.println("*** Você GANHOU da máquina, meu amigo! <3 ***");
 						System.out.println();
 						totalVencedorJogador++; // Acrescenta 1 ponto para o jogador;
 						
@@ -114,7 +114,7 @@ public class GameJokenpo {
 					{
 						// Bloco para pontuação da máquina;
 						System.out.println();
-						System.out.println("Você PERDEU para a máquina! :C");
+						System.out.println("*** Você PERDEU para a máquina! :C ***");
 						System.out.println();
 						totalVencedorMaquina++; // Acrescenta 1 ponto para a máquina;
 						
@@ -123,7 +123,7 @@ public class GameJokenpo {
 					} else {
 						// Bloco para empate e seu tratamento;
 						System.out.println();
-						System.out.printf("\nEmpatou, escolha novamente: ");
+						System.out.printf("\n*** Empatou, escolha novamente: ***");
 						System.out.println();
 						System.out.println("[1] - Pedra;");
 						System.out.println("[2] - Papel;");

@@ -1,8 +1,11 @@
 package calculoDeIMC;
 
-public class CalculoIMC {
+public class CalculoIMC 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		
 		double alt = 1.90;
 		double pes = 89;
 		double calc = pes / (alt * alt);
