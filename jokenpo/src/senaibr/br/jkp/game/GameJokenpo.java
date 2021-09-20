@@ -18,7 +18,9 @@ public class GameJokenpo {
 		 * Declaração das variáveis;
 		 */
 		int acesso, maquina, jogador, quantidadePartida, totalVencedorJogador, 
-		totalVencedorMaquina, Desempate, contadorPartidas,totalNecessarioInt;
+		totalVencedorMaquina, contadorPartidas,totalNecessarioInt;
+		
+		boolean Desempate;
 		
 		double totalNecessario;
 		
@@ -32,7 +34,7 @@ public class GameJokenpo {
 			contadorPartidas= 1;
 			totalVencedorJogador = 0;
 			totalVencedorMaquina = 0;
-			Desempate = 0;
+			Desempate = false;
 			
 			// Criação dos objetos: Scanner e Random;
 			Scanner leitor = new Scanner(System.in); // Scanner Aberto, pois quando fechado em loop, retorna erro na class Scanner;
@@ -108,7 +110,7 @@ public class GameJokenpo {
 						System.out.println();
 						totalVencedorJogador++; // Acrescenta 1 ponto para o jogador;
 						
-						Desempate = 0;
+						Desempate = false;
 						
 					} else if ((jogador == 1 && maquina == 2) || (jogador == 2 && maquina == 3) || (jogador == 3 && maquina == 1)) 
 					{
@@ -118,7 +120,7 @@ public class GameJokenpo {
 						System.out.println();
 						totalVencedorMaquina++; // Acrescenta 1 ponto para a máquina;
 						
-						Desempate = 0;
+						Desempate = false;
 						
 					} else {
 						// Bloco para empate e seu tratamento;
@@ -133,10 +135,10 @@ public class GameJokenpo {
 						jogador = leitor.nextInt();			
 						maquina = sorteio.nextInt(3) + 1;
 						
-						Desempate = 1;
+						Desempate = true;
 					}
 					
-				} while(Desempate == 1); // se Desempate for igual a 1 ele gera novas opções para ambos os jogadores;
+				} while(Desempate == true); // se Desempate for igual a True ele gera novas opções para ambos os jogadores;
 					
 				// Imprime a escolha da Máquina;
 				if(maquina == 1) 
