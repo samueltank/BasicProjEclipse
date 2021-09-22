@@ -18,17 +18,22 @@ public class Tabuada {
 		
 		ler.close();
 		
-		contador = 1;
+		contador = 0;
 		
 		System.out.println("");
 		System.out.println("       TABUADA DO " + multiplicando);
 		System.out.println("----------------------------");
 		
-		while(contador <= multiplicador) {
+		for (contador = 1; contador <= multiplicador; contador++)
+		{
+			res = multiplicando  * contador;
+			System.out.println(multiplicando + " x " + contador + " = " + res);
+		}
+		/*while(contador <= multiplicador) {
 			res = multiplicando  * contador;
 			System.out.println(multiplicando + " x " + contador + " = " + res);
 			contador++;
-		}
+		}*/
 		System.out.println("----------------------------");
 	}
  }
