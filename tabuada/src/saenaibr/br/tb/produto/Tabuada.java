@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Tabuada {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		int contador, multiplicando, multiplicador,res;
 
